@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="sw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TARIMONOEL Electronic</title>
+
+    <!-- Manifest na Theme Color -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#003366">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Service Worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(() => console.log("Service Worker registered"))
+                .catch(err => console.log("SW registration failed: ", err));
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>TARIMONOEL Electronic</h1>
+        <nav>
+            <a href="#huduma">Huduma</a>
+            <a href="#bidhaa">Bidhaa</a>
+            <a href="#mawasiliano">Mawasiliano</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="welcome">
+            <h2>Karibu TARIMONOEL Electronic</h2>
+            <p>Tunauza vifaa vya kielektroniki: simu, kompyuta na accessories.</p>
+            <button onclick="alert('Karibu TARIMONOEL Electronic!')">Bonyeza Kujua Zaidi</button>
+        </section>
+
+        <section id="huduma">
+            <h2>Huduma Zetu</h2>
+            <ul>
+                <li>Uuzaji wa vifaa vipya na vilivyotumika</li>
+                <li>Matengenezo ya kompyuta na simu</li>
+                <li>Huduma za software na updates</li>
+            </ul>
+        </section>
+
+        <section id="bidhaa">
+            <h2>Bidhaa Maarufu</h2>
+            <div class="product">
+                <img src="https://via.placeholder.com/150" alt="Laptop">
+                <p>Laptop Bora</p>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/150" alt="Simu">
+                <p>Simu za Kisasa</p>
+            </div>
+        </section>
+
+        <section id="mawasiliano">
+            <h2>Wasiliana Nasi</h2>
+            <p>Simu: +255 617294973</p>
+            <p>Email: tarimonoel@electronics.com</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 TARIMONOEL Electronic</p>
+    </footer>
+</body>
+
+</html>
